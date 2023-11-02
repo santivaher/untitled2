@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    implementation 'org.seleniumhq.selenium:selenium-chrome-driver:3.141.59'
+}
+
+test {
+    useJUnitPlatform()
+}
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(15)
+    }
+}
